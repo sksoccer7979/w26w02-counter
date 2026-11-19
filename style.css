@@ -1,21 +1,75 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   text-align: center;
   padding: 40px;
+  margin: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+  color: #fff3e0;
+  background-color: #3b2314;
+  background-image:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.25) 2px, transparent 2px),
+    linear-gradient(rgba(0, 0, 0, 0.25) 2px, transparent 2px),
+    linear-gradient(135deg, #5a3520, #2e1a0e);
+  background-size: 80px 80px, 80px 80px, 100% 100%;
+}
+
+h1 {
+  font-size: 40px;
+  color: #f5d0a9;
+  text-shadow: 2px 2px 0 #1e0f06;
+}
+
+h1::before,
+h1::after {
+  content: " 🍫 ";
 }
 
 #count {
-  font-size: 48px;
+  display: inline-block;
+  min-width: 140px;
+  font-size: 56px;
+  font-weight: bold;
   margin: 20px 0;
+  padding: 20px 30px;
+  border-radius: 16px;
+  color: #ffe4c4;
+  background: linear-gradient(145deg, #7b4a2d, #4a2a17);
+  box-shadow:
+    inset 3px 3px 6px rgba(255, 255, 255, 0.15),
+    inset -4px -4px 8px rgba(0, 0, 0, 0.4),
+    0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
 button {
   font-size: 18px;
+  font-weight: bold;
   margin: 5px;
-  padding: 10px 20px;
+  padding: 12px 24px;
   cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  color: #3b2314;
+  background: linear-gradient(145deg, #f5d0a9, #d9a066);
+  box-shadow: 0 4px 0 #8b5a2b, 0 6px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.1s, background 0.2s;
 }
 
 button:hover {
-  background-color: #fd8a8a;
+  background: linear-gradient(145deg, #ffe4c4, #e8b27a);
+}
+
+button:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #8b5a2b, 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+#reset {
+  color: #fff3e0;
+  background: linear-gradient(145deg, #a0522d, #6b3a1f);
+  box-shadow: 0 4px 0 #3b1f0e, 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+#reset:hover {
+  background: linear-gradient(145deg, #b5653a, #7d4626);
 }
